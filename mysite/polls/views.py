@@ -4,8 +4,8 @@ from polls.models import Materials,Production
 from polls.serializers import MaterialsSerializer,ProductionSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from master.models import item,customer,people
-from master.serializers import itemSerializer,customerSerializer,peopleSerializer
+from master.models import item,customer,people,reports,inventory,sales,purchase
+from master.serializers import itemSerializer,customerSerializer,peopleSerializer,reportsSerializer,inventorySerializer,salesSerializer,purchaseSerializer
 
 def index(request):
     return HttpResponse("Hello!!! World")
@@ -61,6 +61,47 @@ class peopleList(APIView):
         serializer = peopleSerializer(people1,many=True)
         return Response(serializer.data)
 
+
+    def post(self):
+        pass
+
+class reportsList(APIView):
+
+    def get(self,request):
+        report1 = reports.objects.all()
+        serializer = reportsSerializer(report1,many=True)
+        return Response(serializer.data)
+
+
+    def post(self):
+        pass
+
+class inventoryList(APIView):
+
+    def get(self,request):
+        invent1 = inventory.objects.all()
+        serializer = inventorySerializer(invent1,many=True)
+        return Response(serializer.data)
+
+    def post(self):
+        pass
+
+class salesList(APIView):
+
+    def get(self,request):
+        sales1 = sales.objects.all()
+        serializer = salesSerializer(sales1,many=True)
+        return Response(serializer.data)
+
+    def post(self):
+        pass
+
+class purchaseList(APIView):
+
+    def get(self,request):
+        purchase1 = purchase.objects.all()
+        serializer = purchaseSerializer(purchase1,many=True)
+        return Response(serializer.data)
 
     def post(self):
         pass
