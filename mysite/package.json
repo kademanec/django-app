@@ -1,0 +1,26 @@
+{
+  "name": "mysite",
+  "version": "1.0.0",
+  "description": "learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kademanec/django-app.git"
+  },
+  "keywords": [
+    "django",
+    "app"
+  ],
+  "author": "chinmaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kademanec/django-app/issues"
+  },
+  "homepage": "https://github.com/kademanec/django-app#readme",
+  "dependencies": {
+    "angular": "^1.7.8"
+  }
+}
